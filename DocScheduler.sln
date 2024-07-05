@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.API", "DocScheduler.API\DocScheduler.API.csproj", "{5F65026F-4722-420D-ACAB-ECB9C8132840}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.SlotService", "DocScheduler.SlotService\DocScheduler.SlotService.csproj", "{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Application", "DocScheduler.Application\DocScheduler.Application.csproj", "{C312735F-935D-4183-9518-D879B6E6336B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Test", "DocScheduler.Test\DocScheduler.Test.csproj", "{A2593B40-4694-4701-8522-F281105C5869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocScheduler.Utils", "DocScheduler.Utils\DocScheduler.Utils.csproj", "{C080922D-617E-4296-A81F-4FC78926E520}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2593B40-4694-4701-8522-F281105C5869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2593B40-4694-4701-8522-F281105C5869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2593B40-4694-4701-8522-F281105C5869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2593B40-4694-4701-8522-F281105C5869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {183758EF-B279-4C30-A17B-FE390802FBC9}
+	EndGlobalSection
+EndGlobal
