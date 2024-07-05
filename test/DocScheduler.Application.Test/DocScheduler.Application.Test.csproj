@@ -18,9 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DocScheduler.API\DocScheduler.API.csproj" />
-    <ProjectReference Include="..\DocScheduler.Application\DocScheduler.Application.csproj" />
-    <ProjectReference Include="..\DocScheduler.Utils\DocScheduler.Utils.csproj" />
+    <ProjectReference Include="..\..\src\DocScheduler.Application\DocScheduler.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
