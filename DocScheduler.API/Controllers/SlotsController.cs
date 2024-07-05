@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DocScheduler.API
 {
-    [Route("api/[controller]")]
+    [Route("api/slots")]
     [ApiController]
     [Produces("application/json")]
     public class SlotsController : ControllerBase
