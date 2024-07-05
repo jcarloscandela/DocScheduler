@@ -5,16 +5,17 @@
 The DocScheduler project facilitates scheduling and managing appointments. It is structured into several components, each serving distinct roles within the application ecosystem.
 
 ### Components
+  - **/src** Contains the source code for the project:
+      - **DocScheduler.API**: This layer serves as the entry point for the application, handling HTTP requests and responses. It is configured with Swagger for API documentation and testing.
+      - **DocScheduler.Application**: Contains core business logic and services related to scheduling and managing appointments. It is utilized by the API layer.
+      - **DocScheduler.SlotService**: Manages time slots for appointments, interacting with core application services to ensure slot availability.
+      - **DocScheduler.Utils**: Provides utility functions and helpers used across the application, including date manipulation and validation functions.
 
-- **DocScheduler.API**: This layer serves as the entry point for the application, handling HTTP requests and responses. It is configured with Swagger for API documentation and testing.
-
-- **DocScheduler.Application**: Contains core business logic and services related to scheduling and managing appointments. It is utilized by the API layer.
-
-- **DocScheduler.SlotService**: Manages time slots for appointments, interacting with core application services to ensure slot availability.
-
-- **DocScheduler.Utils**: Provides utility functions and helpers used across the application, including date manipulation and validation functions.
-
-- **DocScheduler.Test**: Contains unit tests ensuring the core functionality works as expected.
+  - **/test** Contains unit tests for the project.
+      - **DocScheduler.API.Test**: Contains API unit tests.
+      - **DocScheduler.Application.Test**: Contains application layer unit tests.
+      - **DocScheduler.SlotService.Test**: Contains slot service unit tests.
+      - **DocScheduler.Utils.Test**: Contains utility unit tests.
 
 ## Running the Project
 
