@@ -1,4 +1,4 @@
-﻿namespace DocScheduler.Application.Exceptions
+﻿namespace DocScheduler.Application
 {
     public class SlotNotFoundException : Exception
     {

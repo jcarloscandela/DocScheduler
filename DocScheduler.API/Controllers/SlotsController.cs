@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System.ComponentModel.DataAnnotations;
 
-namespace DocScheduler.API.Controllers
+namespace DocScheduler.API
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -43,9 +43,9 @@ namespace DocScheduler.API.Controllers
         [ProducesResponseType(typeof(string), 400)]
         [ProducesResponseType(typeof(string), 404)]
         public async Task<IActionResult> ReserveSlot(
-            [FromBody][Required][SwaggerRequestBody("Details of the slot to be reserved")] BookSlotRequest slotDetails)
+            [FromBody][Required][SwaggerRequestBody("Details of the slot to be reserved")] BookSlotRequest request)
         {
-            await _appointmentService.TakeSlotAsync(slotDetails);
+            await _appointmentService.TakeSlotAsync(request);
             return Ok("Slot booked successfully.");
         }
     }

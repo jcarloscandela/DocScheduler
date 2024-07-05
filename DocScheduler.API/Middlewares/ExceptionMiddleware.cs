@@ -1,8 +1,7 @@
 ﻿using DocScheduler.Application;
-using DocScheduler.Application.Exceptions;
 using System.Text.Json;
 
-namespace DocScheduler.API.Middlewares
+namespace DocScheduler.API
 {
     public class ExceptionMiddleware
     {
@@ -23,11 +22,11 @@ namespace DocScheduler.API.Middlewares
             {
                 await HandleValidationExceptionAsync(context, ex);
             }
-            catch(SlotNotFoundException ex)
+            catch (SlotNotFoundException ex)
             {
                 await HandleSlotNotFoundExceptionAsync(context, ex);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 await HandleExceptionAsync(context, ex);
             }

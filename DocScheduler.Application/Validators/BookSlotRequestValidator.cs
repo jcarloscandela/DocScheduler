@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace DocScheduler.Application.Validators
+namespace DocScheduler.Application
 {
     public class BookSlotRequestValidator : AbstractValidator<BookSlotRequest>
     {

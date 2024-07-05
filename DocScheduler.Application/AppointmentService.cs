@@ -1,6 +1,4 @@
 ﻿using AutoMapper;
-using DocScheduler.Application.Exceptions;
-using DocScheduler.Application.Validators;
 using DocScheduler.SlotService;
 using DocScheduler.Utils;
 

@@ -8,17 +8,13 @@ namespace DocScheduler.SlotService
     public class SlotServiceClient : ISlotServiceClient
     {
         private readonly HttpClient _httpClient;
-        private readonly ILogger _logger;
+        private readonly ILogger<SlotServiceClient> _logger;
 
-        public SlotServiceClient(ILogger logger, SlotServiceClientOptions options)
+        public SlotServiceClient(ILogger<SlotServiceClient> logger, HttpClient httpClient, SlotServiceClientOptions options)
         {
             _logger = logger;
-
-            // Initialize HttpClient with base URL and authorization header
-            _httpClient = new HttpClient
-            {
-                BaseAddress = new Uri(options.BaseUrl)
-            };
+            _httpClient = httpClient;
+            _httpClient.BaseAddress = new Uri(options.BaseUrl);
 
             var authToken = Convert.ToBase64String(Encoding.UTF8.GetBytes($"{options.Username}:{options.Password}"));
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authToken);
@@ -35,52 +31,57 @@ namespace DocScheduler.SlotService
 
         public async Task<TakeSlotResponse> TakeSlotAsync(TakeSlotRequest request)
         {
-            return await ExecuteRequestAsync<TakeSlotResponse>(
+            var response = await ExecuteRequestAsync<string>(
                 HttpMethod.Post,
                 "TakeSlot",
                 "Error taking slot",
                 request
             );
+
+            if (string.IsNullOrEmpty(response))
+            {
+                return new TakeSlotResponse { Success = true };
+            }
+
+            return new TakeSlotResponse { Success = false, Message = response };
         }
 
         private async Task<T> ExecuteRequestAsync<T>(HttpMethod method, string endpoint, string errorMessage, object requestData = null)
         {
-            try
+            var url = $"{_httpClient.BaseAddress}/{endpoint}";
+            HttpResponseMessage response;
+
+            if (method == HttpMethod.Get)
             {
-                var url = $"{_httpClient.BaseAddress}/{endpoint}";
-                HttpResponseMessage response;
-
-                if (method == HttpMethod.Get)
-                {
-                    response = await _httpClient.GetAsync(url);
-                }
-                else if (method == HttpMethod.Post)
-                {
-                    var jsonContent = JsonSerializer.Serialize(requestData);
-                    var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-                    response = await _httpClient.PostAsync(url, content);
-                }
-                else
-                {
-                    throw new ArgumentException("Unsupported HTTP method");
-                }
-
-                if (!response.IsSuccessStatusCode)
-                {
-                    var errorDetails = await GetErrorDetails(response);
-                    _logger.LogError("{ErrorMessage}. Status code: {StatusCode}, Reason: {ReasonPhrase}, Error details: {ErrorDetails}",
-                        errorMessage, response.StatusCode, response.ReasonPhrase, errorDetails);
-                    throw new HttpRequestException($"{errorMessage}. Status code: {response.StatusCode}, Reason: {response.ReasonPhrase}");
-                }
-
-                var responseContent = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<T>(responseContent);
+                response = await _httpClient.GetAsync(url);
             }
-            catch (Exception ex)
+            else if (method == HttpMethod.Post)
             {
-                _logger.LogError(ex, "Exception occurred in {MethodName}", nameof(ExecuteRequestAsync));
-                throw new ApplicationException($"An unexpected error occurred while {errorMessage.ToLower()}. Please try again later.", ex);
+                var jsonContent = JsonSerializer.Serialize(requestData);
+                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+                response = await _httpClient.PostAsync(url, content);
             }
+            else
+            {
+                throw new ArgumentException("Unsupported HTTP method");
+            }
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorDetails = await GetErrorDetails(response);
+                _logger.LogError("{ErrorMessage}. Status code: {StatusCode}, Reason: {ReasonPhrase}, Error details: {ErrorDetails}",
+                    errorMessage, response.StatusCode, response.ReasonPhrase, errorDetails);
+                throw new HttpRequestException($"{errorMessage}. Status code: {response.StatusCode}, Reason: {response.ReasonPhrase}");
+            }
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+
+            if (string.IsNullOrEmpty(responseContent))
+            {
+                return default;
+            }
+
+            return JsonSerializer.Deserialize<T>(responseContent);
         }
 
         private async Task<string> GetErrorDetails(HttpResponseMessage response)

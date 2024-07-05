@@ -26,7 +26,7 @@
         public List<BusySlot> BusySlots { get; set; }
     }
 
-    public record  WorkPeriod
+    public record WorkPeriod
     {
         public required int StartHour { get; set; }
         public required int LunchStartHour { get; set; }
@@ -40,5 +40,3 @@
         public DateTime End { get; set; }
     }
 }
-
-

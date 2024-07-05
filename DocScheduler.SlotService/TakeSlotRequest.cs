@@ -11,9 +11,9 @@
 
     public class Patient
     {
-        public required string Name { get; set; }
-        public required string SecondName { get; set; }
-        public required string Email { get; set; }
-        public required string Phone { get; set; }
+        public string Name { get; set; }
+        public string SecondName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
     }
 }

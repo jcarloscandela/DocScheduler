@@ -1,5 +1,3 @@
-using DocScheduler.API.Middlewares;
-using DocScheduler.Application;
 using DocScheduler.SlotService;
 
 namespace DocScheduler.API

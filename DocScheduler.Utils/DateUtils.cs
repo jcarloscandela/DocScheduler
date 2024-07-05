@@ -12,15 +12,12 @@ namespace DocScheduler.Utils
             return date.Date.AddDays(-daysUntilMonday);
         }
 
-        public static DateTime GetFutureMonday()
+        public static DateTime GetNextMonday(DateTime currentDate)
         {
-            DateTime currentDate = DateTime.UtcNow;
-
             int daysUntilMonday = ((int)DayOfWeek.Monday - (int)currentDate.DayOfWeek + 7) % 7;
 
             return currentDate.AddDays(daysUntilMonday);
         }
-
 
         public static string GetFormattedDate(DateTime date)
         {
