@@ -1,6 +1,6 @@
 ﻿namespace DocScheduler.Application
 {
-    public class BookSlotRequest
+    public record BookSlotRequest
     {
         public Guid FacilityId { get; set; }
         public DateTime Start { get; set; }

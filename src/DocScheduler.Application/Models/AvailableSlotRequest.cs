@@ -1,6 +1,6 @@
 ﻿namespace DocScheduler.Application
 {
-    public class AvailableSlotRequest
+    public record AvailableSlotRequest
     {
         public DateOnly MondayDate { get; set; }
     }
