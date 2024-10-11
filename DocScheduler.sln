@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.API", "src\DocScheduler.API\DocScheduler.API.csproj", "{5F65026F-4722-420D-ACAB-ECB9C8132840}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.SlotService", "src\DocScheduler.SlotService\DocScheduler.SlotService.csproj", "{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Application", "src\DocScheduler.Application\DocScheduler.Application.csproj", "{C312735F-935D-4183-9518-D879B6E6336B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Utils", "src\DocScheduler.Utils\DocScheduler.Utils.csproj", "{C080922D-617E-4296-A81F-4FC78926E520}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.API.Test", "test\DocScheduler.API.Test\DocScheduler.API.Test.csproj", "{2B5E2FA8-9034-48ED-A386-A36D88C420E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.SlotService.Test", "test\DocScheduler.SlotServiceClient.Test\DocScheduler.SlotService.Test.csproj", "{3762B538-2ADD-4117-A4FE-31A7D14979B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9A88CE94-2965-473A-9268-24A6A2A8EF6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8A2DC0ED-FF12-4F2B-AD7C-CC05BBB7AA66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "readme", "readme", "{8966C938-FE46-4046-8161-0462FE010A77}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Utils.Test", "test\DocScheduler.Utils.Test\DocScheduler.Utils.Test.csproj", "{84C47E8C-162D-45A5-9068-57BB05B4D9BC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Application.Test", "test\DocScheduler.Application.Test\DocScheduler.Application.Test.csproj", "{105A6EB2-0EFA-45B6-A565-50745447F7D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F65026F-4722-420D-ACAB-ECB9C8132840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C312735F-935D-4183-9518-D879B6E6336B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C080922D-617E-4296-A81F-4FC78926E520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5E2FA8-9034-48ED-A386-A36D88C420E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5E2FA8-9034-48ED-A386-A36D88C420E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5E2FA8-9034-48ED-A386-A36D88C420E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5E2FA8-9034-48ED-A386-A36D88C420E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3762B538-2ADD-4117-A4FE-31A7D14979B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3762B538-2ADD-4117-A4FE-31A7D14979B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3762B538-2ADD-4117-A4FE-31A7D14979B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3762B538-2ADD-4117-A4FE-31A7D14979B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84C47E8C-162D-45A5-9068-57BB05B4D9BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84C47E8C-162D-45A5-9068-57BB05B4D9BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84C47E8C-162D-45A5-9068-57BB05B4D9BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84C47E8C-162D-45A5-9068-57BB05B4D9BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105A6EB2-0EFA-45B6-A565-50745447F7D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105A6EB2-0EFA-45B6-A565-50745447F7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105A6EB2-0EFA-45B6-A565-50745447F7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105A6EB2-0EFA-45B6-A565-50745447F7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F65026F-4722-420D-ACAB-ECB9C8132840} = {8A2DC0ED-FF12-4F2B-AD7C-CC05BBB7AA66}
+		{753B4B7A-1BED-40D1-BA37-8B3F214B9BA4} = {8A2DC0ED-FF12-4F2B-AD7C-CC05BBB7AA66}
+		{C312735F-935D-4183-9518-D879B6E6336B} = {8A2DC0ED-FF12-4F2B-AD7C-CC05BBB7AA66}
+		{C080922D-617E-4296-A81F-4FC78926E520} = {8A2DC0ED-FF12-4F2B-AD7C-CC05BBB7AA66}
+		{2B5E2FA8-9034-48ED-A386-A36D88C420E3} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
+		{3762B538-2ADD-4117-A4FE-31A7D14979B4} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
+		{84C47E8C-162D-45A5-9068-57BB05B4D9BC} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
+		{105A6EB2-0EFA-45B6-A565-50745447F7D9} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {183758EF-B279-4C30-A17B-FE390802FBC9}
+	EndGlobalSection
+EndGlobal
