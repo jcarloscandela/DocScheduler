@@ -28,6 +28,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Utils.Test", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocScheduler.Application.Test", "test\DocScheduler.Application.Test\DocScheduler.Application.Test.csproj", "{105A6EB2-0EFA-45B6-A565-50745447F7D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocScheduler.Integration.Test", "test\DocScheduler.Integration.Test\DocScheduler.Integration.Test.csproj", "{ECD5C5AB-C8BF-1365-25F9-8C828D4CA1E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{105A6EB2-0EFA-45B6-A565-50745447F7D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{105A6EB2-0EFA-45B6-A565-50745447F7D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{105A6EB2-0EFA-45B6-A565-50745447F7D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD5C5AB-C8BF-1365-25F9-8C828D4CA1E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD5C5AB-C8BF-1365-25F9-8C828D4CA1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD5C5AB-C8BF-1365-25F9-8C828D4CA1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD5C5AB-C8BF-1365-25F9-8C828D4CA1E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +85,7 @@ Global
 		{3762B538-2ADD-4117-A4FE-31A7D14979B4} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
 		{84C47E8C-162D-45A5-9068-57BB05B4D9BC} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
 		{105A6EB2-0EFA-45B6-A565-50745447F7D9} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
+		{ECD5C5AB-C8BF-1365-25F9-8C828D4CA1E0} = {9A88CE94-2965-473A-9268-24A6A2A8EF6B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {183758EF-B279-4C30-A17B-FE390802FBC9}
